@@ -13,5 +13,28 @@
 /* end cuong */
 
 /* duc  */
+.duc-sidebar-right{
+    display: flex;
+    flex-direction: column;
+}
+
+.duc-input{
+    width: 100%;
+   
+}
+
+.duc-input input{
+    position: relative;
+    width: 100%;
+
+    border-radius: 22px;
+    max-width: 18rem;
+    background-color: #E6ECF0;
+    height: 48px;
+}
+
+.duc-input .fa-search{
+    position: absolute;
+}
 
 /* end duc */
