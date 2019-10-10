@@ -1,8 +1,12 @@
 
 /* please declare class name or id with name first. ex: duc-body,duc-img,etc. */
+
+
 /* parsa */
 
+
 /* end parsa */
+
 
 /* vu */
 .homePage{
@@ -67,6 +71,7 @@
 }
 /* end vu  */
 
+
 /* cuong  */
 #cuong-card {
     display: flex;
@@ -81,7 +86,9 @@
     display: flex;
 }
 
+
 /* end cuong */
+
 
 /* duc  */
 .duc-sidebar-right{
@@ -119,4 +126,9 @@
     left:0;
 }
 
+<<<<<<< HEAD
+
 /* end duc */
+=======
+/* end duc */
+>>>>>>> master
