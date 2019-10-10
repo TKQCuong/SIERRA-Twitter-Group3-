@@ -43,8 +43,9 @@
               <img src="line-icon.PNG">
               <img src="smile-icon.PNG">
 
-              <button type="button" class="btn btn-primary active" style="border-top-left-radius: 999px;border-top-right-radius: 999px;border-bottom-left-radius: 999px;border-bottom-right-radius: 999px;">Tweet</button>
-          </div>
+              <button onclick="tweetPost()" id="btn-tweeter" type="button" class="btn btn-primary active" style="border-top-left-radius: 999px;border-top-right-radius: 999px;border-bottom-left-radius: 999px;border-bottom-right-radius: 999px;">Tweet</button>
+            <span id="countText"></span>
+            </div>
         </div>
       </div>
     </div>
@@ -54,13 +55,13 @@
       <!-- cuong -->
       <div id="cuong-section">   
           <!-- The image in the card will be fixed with our picture -->
-        <div class="card mb-3 cuong-smallcard" style="max-width: 640px;">
+        <div id="result" class="card mb-3 cuong-smallcard" style="max-width: 640px;">
           <div class="row no-gutters cuong-row">
             <div class="col-md-4 cuong-img-div">
               <img src="https://www.asiatripdeals.com/wp-content/uploads/2019/03/Anonymous-Avatar.png" class="card-img cuong-card-img" alt="..." />
             </div>
-            <div class="col-md-8">
-              <div class="card-body cuong-card-body">
+            <div class="col-md-8" id="show-message">
+              <!-- <div class="card-body cuong-card-body">
                 <h5 class="card-title">NAME</h5>
                 <p class="card-text cuong-comment">COMMENT SECTION</p>
                 <hr>
@@ -71,7 +72,7 @@
                 <p class="card-text">
                   <small class="text-muted">Last updated 3 mins ago</small>
                 </p>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
