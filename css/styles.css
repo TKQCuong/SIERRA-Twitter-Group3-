@@ -46,6 +46,11 @@
     align-items: center;;
 }
 
+.duc-input:hover{
+    background-color: white;
+    border:1px solid #1DA1F2
+}
+
 .duc-input input{
     position: relative;
     width: 100%;
@@ -56,9 +61,43 @@
     
 }
 
+
 .duc-input div .fa-search{
     position: absolute;
     left:0;
 }
 
+.duc-yourTrend{
+    border-radius: 25px;
+}
+.duc-yourTrend .card{
+    border-radius: 25px;
+}
+
+.duc-trend-hover{
+    background-color: rgba(0,0,0,.03);
+}
+.duc-trend-hover:hover{
+    cursor: pointer;
+    background-color: #F5F8FA;
+
+}
+
+
+.duc-coppyright ul{
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+}
+
+.duc-coppyright ul li{
+    margin-right:6px;
+}
+
+.duc-coppyright ul li a{
+    color:#A1ACB5;
+    font-size: 10pt;
+    text-decoration: none;
+
+}
 /* end duc */
