@@ -18,8 +18,12 @@
     padding-top: 0.8rem; 
     padding-left: 0.8rem;
     border-radius: 50%;
-    width: 10rem;
+    /* width: 10rem; */
+    max-width: 10%;
+    min-width: 50%;
+    height: auto;
 }
+
 .cuong-comment {
     font-size: 12px;
 }
