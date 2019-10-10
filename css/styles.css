@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-#cuong-card {
-    display: flex;
-    justify-content: center;
-}
-.card-img {
-    width: 100px;
-    padding-top: 1.5rem;
-}
 
-.row {
-    display: flex;
-}
-=======
 /* please declare class name or id with name first. ex: duc-body,duc-img,etc. */
 /* parsa */
 
@@ -23,6 +10,52 @@
 /* end vu  */
 
 /* cuong  */
+#cuong-section {
+    display: flex;
+    justify-content: center;
+}
+.cuong-card-img {
+    padding-top: 0.8rem; 
+    padding-left: 0.8rem;
+    border-radius: 50%;
+    width: 10rem;
+}
+.cuong-comment {
+    font-size: 12px;
+}
+.cuong-row {
+    display: flex;
+}
+.cuong-smallcard {
+    border: solid 	#696969;
+}
+.cuong-card-body button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 7px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    opacity: 0.9;
+}
+.cuong-card-body button:hover {
+    opacity: 1.5;
+}
+#cuong-like {
+    background-color: #008CBA;
+}
+#cuong-retweet {
+    background-color: #4CAF50;
+}
+#cuong-delete {
+    background-color: #f44336;
+}
 
 /* end cuong */
 
