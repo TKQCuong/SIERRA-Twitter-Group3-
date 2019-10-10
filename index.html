@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Title</title>
@@ -10,15 +9,18 @@
     />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
   <body>
     <!-- parsa -->
 
@@ -30,21 +32,45 @@
 
     <!-- cuong -->
 
+    <div id="cuong-card">
+      <!-- The image in the card will be fixed with our picture -->
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="img/examplePic.jpg" class="card-img" alt="..." />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <hr />
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- end cuong -->
 
     <!-- duc -->
     <div class="duc-sidebar-right">
-        <div class="duc-input">
-            <input type="text" />
-            <i class="fa fa-search" aria-hidden="true"></i>
-        </div>
+      <div class="duc-input">
+        <i class="fa fa-search" aria-hidden="true"></i>  
+        <span class="ml-2"> <input type="text"  placeholder="Search Twitter"/></span>
+        
+      </div>
       <div class="duc-yourTrend mt-3">
         <div class="card" style="width: 18rem;">
           <div class="card-header">
-              
             Trends for you
           </div>
-          <ul class="list-group list-group-flush">
+          <ul class="list-group list-group-flush ">
             <li class="list-group-item">#Vietnam</li>
             <li class="list-group-item">Hong Kong</li>
             <li class="list-group-item">China</li>
@@ -55,16 +81,16 @@
         </div>
       </div>
       <div class="duc-follow mt-3">
-            <div class="card" style="width: 18rem;">
-                    <div class="card-header">
-                      Who to follow
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">Ha Noi</li>
-                      <li class="list-group-item">Malaysia</li>
-                      <li class="list-group-item"><a href="#">Show more</a></li>
-                    </ul>
-                  </div>
+        <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            Who to follow
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Ha Noi</li>
+            <li class="list-group-item">Malaysia</li>
+            <li class="list-group-item"><a href="#">Show more</a></li>
+          </ul>
+        </div>
       </div>
     </div>
 

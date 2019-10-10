@@ -1,3 +1,4 @@
+
 /* please declare class name or id with name first. ex: duc-body,duc-img,etc. */
 /* parsa */
 
@@ -9,6 +10,18 @@
 /* end vu  */
 
 /* cuong  */
+#cuong-card {
+    display: flex;
+    justify-content: center;
+}
+.card-img {
+    width: 100px;
+    padding-top: 1.5rem;
+}
+
+.row {
+    display: flex;
+}
 
 /* end cuong */
 
@@ -16,25 +29,36 @@
 .duc-sidebar-right{
     display: flex;
     flex-direction: column;
+
 }
 
 .duc-input{
+    max-width: 18rem;
     width: 100%;
+    border-radius: 22px;
+    
+    background-color: #E6ECF0;
+    height: 48px;
    
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;;
 }
 
 .duc-input input{
     position: relative;
     width: 100%;
-
-    border-radius: 22px;
-    max-width: 18rem;
-    background-color: #E6ECF0;
-    height: 48px;
+    width: 242px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    
 }
 
-.duc-input .fa-search{
+.duc-input div .fa-search{
     position: absolute;
+    left:0;
 }
 
 /* end duc */
