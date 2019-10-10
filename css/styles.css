@@ -1,4 +1,15 @@
-<<<<<<< HEAD
+
+/* please declare class name or id with name first. ex: duc-body,duc-img,etc. */
+/* parsa */
+
+/* end parsa */
+
+/* vu */
+
+
+/* end vu  */
+
+/* cuong  */
 #cuong-card {
     display: flex;
     justify-content: center;
@@ -11,22 +22,43 @@
 .row {
     display: flex;
 }
-=======
-/* please declare class name or id with name first. ex: duc-body,duc-img,etc. */
-/* parsa */
-
-/* end parsa */
-
-/* vu */
-
-
-/* end vu  */
-
-/* cuong  */
 
 /* end cuong */
 
 /* duc  */
+.duc-sidebar-right{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.duc-input{
+    max-width: 18rem;
+    width: 100%;
+    border-radius: 22px;
+    
+    background-color: #E6ECF0;
+    height: 48px;
+   
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;;
+}
+
+.duc-input input{
+    position: relative;
+    width: 100%;
+    width: 242px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    
+}
+
+.duc-input div .fa-search{
+    position: absolute;
+    left:0;
+}
 
 /* end duc */
->>>>>>> master
