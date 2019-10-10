@@ -5,8 +5,36 @@
 /* end parsa */
 
 /* vu */
-
-
+.homePage{
+    height: 53px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15p;
+    padding-right: 15px;
+}
+#homeText{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    line-height: 1.3;
+    font-size: 19px;
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex: 7;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+}
+#input{
+    display: flex;
+}
+#text{
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
 /* end vu  */
 
 /* cuong  */
