@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>SIERRA</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -9,8 +9,13 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
@@ -19,10 +24,10 @@
   <body>
     <!-- parsa -->
     <div class="sidebar" style="background-color: blue;">
-        <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
-        <a href="#services"><i class="fa fa-fw fa-wrench"></i> Services</a>
-        <a href="#clients"><i class="fa fa-fw fa-user"></i> Clients</a>
-        <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+      <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="#services"><i class="fa fa-fw fa-wrench"></i> Services</a>
+      <a href="#clients"><i class="fa fa-fw fa-user"></i> Clients</a>
+      <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
     </div>
     <!-- end parsa -->
 
@@ -35,31 +40,52 @@
         </div>
         <hr />
         <div id="input">
-          <img src="img/avatar-icon.png" style="height: 45px; padding-left: 15px; padding-right: 15px;" />
+          <img
+            src="img/avatar-icon.png"
+            style="height: 45px; padding-left: 15px; padding-right: 15px;"
+          />
           <div id="inputText">
-            <input type="text" id="text" style="height: 80px;" placeholder="What's happening?"/>
+            <textarea
+              type="text"
+              id="text"
+              style="height: 80px;"
+              placeholder="What's happening?"
+            ></textarea>
             <div id="typeOfInput" style="padding-top: 10px;">
-                <img src="img/img-icon.PNG">
-                <img src="img/gif-icon.PNG">
-                <img src="img/line-icon.PNG">
-                <img src="img/smile-icon.PNG">
+              <img src="img/img-icon.PNG" />
+              <img src="img/gif-icon.PNG" />
+              <img src="img/line-icon.PNG" />
+              <img src="img/smile-icon.PNG" />
 
-                <button onclick="tweetPost()" id="btn-tweeter" type="button" class="btn btn-primary active" style="border-top-left-radius: 999px;border-top-right-radius: 999px;border-bottom-left-radius: 999px;border-bottom-right-radius: 999px;">Tweet</button>
+              <button
+                onclick="tweetPost()"
+                id="btn-tweeter"
+                type="button"
+                class="btn btn-primary active"
+                style="border-top-left-radius: 999px;border-top-right-radius: 999px;border-bottom-left-radius: 999px;border-bottom-right-radius: 999px;"
+              >
+                Tweet
+              </button>
               <span id="countText"></span>
-              </div>
+            </div>
           </div>
         </div>
-      </div><hr style="height: 5px; background-color:	#E0E0E0;">
-    <!-- end vu -->
+      </div>
+      <hr style="height: 5px; background-color:	#E0E0E0;" />
+      <!-- end vu -->
 
-    <!-- cuong -->
       <!-- cuong -->
-      <div id="cuong-section">   
-          <!-- The image in the card will be fixed with our picture -->
-        <div id="result" class="card mb-3 cuong-smallcard" style="max-width: 640px;">
+      <!-- cuong -->
+      <div id="cuong-section">
+        <!-- The image in the card will be fixed with our picture -->
+        <div
+          id="result"
+          class="card mb-3 cuong-smallcard"
+          style="max-width: 640px;"
+        >
           <div class="row no-gutters cuong-row">
             <div class="col-md-4 cuong-img-div">
-              <img src="https://www.asiatripdeals.com/wp-content/uploads/2019/03/Anonymous-Avatar.png" class="card-img cuong-card-img" alt="..." />
+              <!-- <img src="https://www.asiatripdeals.com/wp-content/uploads/2019/03/Anonymous-Avatar.png" class="card-img cuong-card-img" alt="..." /> -->
             </div>
             <div class="col-md-8" id="show-message">
               <!-- <div class="card-body cuong-card-body">
@@ -80,20 +106,20 @@
       </div>
     </div>
 
-
-      <!-- end cuong -->
+    <!-- end cuong -->
 
     <!-- duc -->
     <div class="duc-sidebar-right">
       <div class="duc-input">
-        <i class="fa fa-search" aria-hidden="true"></i>  
-        <span class="ml-2"> <input type="text"  placeholder="Search Twitter"/></span>
-        
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <span class="ml-2">
+          <input type="text" placeholder="Search Twitter"
+        /></span>
       </div>
       <div class="duc-yourTrend mt-3">
         <div class="card" style="width: 18rem;">
           <div class="card-header">
-            Trends for you
+            <b>Trends for you</b>
           </div>
           <ul class="list-group list-group-flush ">
             <li class="list-group-item">#Vietnam</li>
@@ -108,7 +134,7 @@
       <div class="duc-follow mt-3">
         <div class="card" style="width: 18rem;">
           <div class="card-header">
-            Who to follow
+            <b>Who to follow</b>
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Ha Noi</li>
