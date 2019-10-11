@@ -2,11 +2,19 @@ let arrTweet = [];
 let tweetText = document.getElementById("text");
 const MAX_TEXT = 140;
 tweetText.addEventListener('input', countText);
-
+let num = 0;
 function tweetPost()
 {
     let content = tweetText.value;
-    arrTweet.unshift(content);
+    let obj = {
+      comment: [
+
+      ],
+      body: content,
+      time: Date.now()
+    }
+
+    arrTweet.unshift(obj)
     tweetText.value = "";
     renderTweeter()
 }
@@ -25,16 +33,16 @@ function renderTweeter()
             <div class="col-md-8" id="show-message">
               <div class="card-body cuong-card-body">
                 <h5 class="card-title">NAME</h5>
-                <p class="card-text cuong-comment">${insertLink(char)}</p>
+                <p class="card-text cuong-comment">${insertLink(char.body)}</p>
                 <hr>
-                <p class="card-text">Posted by <b>Anonymous</b> a few seconds ago</p>
-                <button id="cuong-like">Like</button>
-                <button onclick="reTweet()" >Retweet</button>
-                <button id="cuong-delete">Delete</button>
+                <p class="card-text">Posted by <b>Anonymous</b></p>
+                <button onclick="like(${i})" id="cuong-like${i}" value="Like">Like</button>
+                <button onclick="reTweet(${i})">Retweet</button>
+                <button id="cuong-delete" onclick="cuongdelete(${i})">Delete</button>
                 <p class="card-text">
-                  <small class="text-muted">Last updated 3 mins ago</small>
+                  <small class="text-muted">${moment(char.time).startOf("minute").fromNow()}</small>
                 </p>
-                <span id="cuong-retweet${i}"> </span>
+                <div id="cuong-retweet${i}">${char.comment.join("<br>")}</div>
                 <hr>
               </div>
             </div>
@@ -46,17 +54,41 @@ function renderTweeter()
         document.getElementById('result').innerHTML = html
         
 }
+function cuongdelete(i){
+  arrTweet.splice(i,1);
+  renderTweeter();
+}
 
-function reTweet()
+
+function like(i){
+  let like = document.getElementById(`cuong-like${i}`);
+  if(like.value === "Like"){
+    like.value = "Unlike";
+    document.getElementById(`cuong-like${i}`).innerHTML = "Unlike";
+    document.getElementById(`cuong-like${i}`).style.backgroundColor= "red";
+  }
+  else{
+    like.value = "Like";
+    document.getElementById(`cuong-like${i}`).innerHTML = "Like";
+    document.getElementById(`cuong-like${i}`).style.backgroundColor = "#008CBA";
+  }
+}
+
+function reTweet(i)
 {
     let reTweetProm = prompt("What on your mind? ");
-    document.getElementById("cuong-retweet0").innerHTML = reTweetProm;
+    arrTweet[i].comment.push(reTweetProm);
+    console.log(arrTweet[i]);
+    let htmlReTweet = arrTweet[i].comment.map(reTweet => {
+      return `${reTweet}`
+    }).join("<br>");
+    document.getElementById(`cuong-retweet${i}`).innerHTML = htmlReTweet;
 }
 function insertLink(string) {
     const splitString = string.split(' ')
     return splitString.map(word => {
       const isHashtag = word[0] === '#'
-      return isHashtag ? `<a href="#" onclick="magic()">${word}</a>` : word
+      return isHashtag ? `<a href="#">${word}</a>` : word
     }).join(' ')
 }
 function countText(){
@@ -72,8 +104,14 @@ function countText(){
         document.getElementById('text').style.color="black"  
         document.getElementById('btn-tweeter').disabled=false
     }
-    console.log(remainLetter);
+
 }
-function retweet(){
-    
-}
+
+
+let input = document.getElementById('text');
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("btn-tweeter").click();
+  }
+});
