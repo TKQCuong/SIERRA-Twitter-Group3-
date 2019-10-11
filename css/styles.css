@@ -1,186 +1,188 @@
-body{
-    display:flex;
-    justify-content: space-between;
-    padding-left: 67px;
-    padding-right: 67px;
-    
+body {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 67px;
+  padding-right: 67px;
 }
-.vu-cuong{
-    flex: 2;
-    border: 0.5px solid grey;
-    margin-left: 2%;
-    margin-right: 2%;
+.vu-cuong {
+  flex: 2;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  margin-left: 2%;
+  margin-right: 2%;
+  display: inline-block;
+  min-width: 150px;
 }
-.duc{
-    flex: 1;
+.duc {
+  flex: 1;
 }
-.side-bar{
-    flex: 1;
+.side-bar {
+  flex: 1;
 }
 
 /* please declare class name or id with name first. ex: duc-body,duc-img,etc. */
+
 /* parsa */
+
+
+
 
 /* end parsa */
 
 /* vu */
-.homePage{
-    height: 53px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15p;
-    padding-right: 15px;
+.homePage {
+  height: 53px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15p;
+  padding-right: 15px;
 }
-#homeText{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
-    line-height: 1.3;
-    font-size: 19px;
-    flex-shrink: 1;
-    flex-grow: 1;
-    flex: 7;
-    align-items: center;
-    justify-content: center;
-    padding-left: 15px;
+#homeText {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", sans-serif;
+  line-height: 1.3;
+  font-size: 19px;
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex: 7;
+  align-items: center;
+  justify-content: center;
+  padding-left: 15px;
 }
-#input{
-    display: flex;
+#input {
+  display: flex;
 }
-#inputText{
-    width: 90%;
+#inputText {
+  width: 90%;
 }
-#text{
-    width: 90%;
+#text {
+  width: 90%;
 }
-#btnInput{
-    margin-left: 10px;
-    opacity: 0.5;
-    background-color: rgb(29, 161, 242);
-    transition-property: background-color, box-shadow;
-    transition-duration: 0.2s;
-    padding-left: 1em;
-    padding-right: 1em;
-    border-bottom-color: rgba(0, 0, 0, 0);
-    border-left-color: rgba(0, 0, 0, 0);
-    border-right-color: rgba(0, 0, 0, 0);
-    border-top-color: rgba(0, 0, 0, 0);
-    border-bottom-width: 1px;
-    border-left-width: 1px;
-    border-right-width: 1px;
-    border-top-width: 1px;
-    border-bottom-left-radius: 9999px;
-    border-bottom-right-radius: 9999px;
-    border-top-left-radius: 9999px;
-    border-top-right-radius: 9999px;
-    border-bottom-style: solid;
-    border-left-style: solid;
-    border-right-style: solid;
-    border-top-style: solid;
-
+#btnInput {
+  margin-left: 10px;
+  opacity: 0.5;
+  background-color: rgb(29, 161, 242);
+  transition-property: background-color, box-shadow;
+  transition-duration: 0.2s;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-bottom-color: rgba(0, 0, 0, 0);
+  border-left-color: rgba(0, 0, 0, 0);
+  border-right-color: rgba(0, 0, 0, 0);
+  border-top-color: rgba(0, 0, 0, 0);
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-left-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-top-style: solid;
 }
-#tweetbtn{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+#tweetbtn {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", sans-serif;
 }
 /* end vu  */
 .vu-cuong hr {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 /* cuong  */
 #cuong-section {
-    display: flex;
-    justify-content: center;
-    padding-top: 0px;
+  display: flex;
+  justify-content: center;
+  padding-top: 0px;
 }
 .cuong-smallcard {
-    border-radius: 0px;;
-    margin-bottom: 0rem!important;
+  border-radius: 0px;
+  margin-bottom: 0rem !important;
 }
 .cuong-card-img {
-    padding-top: 0.8rem; 
-    padding-left: 0.8rem;
-    border-radius: 50%;
-    min-width: 50%;
-    height: auto;
+  padding-top: 0.8rem;
+  padding-left: 0.8rem;
+  border-radius: 50%;
+  min-width: 50%;
+  height: auto;
 }
 .cuong-card-body h5 {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 .cuong-comment {
-    font-size: 15px;
+  font-size: 15px;
 }
 .cuong-row {
-    display: flex;
+  display: flex;
 }
 /* .cuong-smallcard {
     border: solid 	#696969;
 } */
 .cuong-card-body button {
-    /* background-color: #4CAF50; Green */
-    border: none;
-    border-radius: 10px;
-    color: white;
-    padding: 7px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    margin: 2px;
-    cursor: pointer;
-    transition-duration: 0.4s;
-    opacity: 0.9;
+  /* background-color: #4CAF50; Green */
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 7px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  opacity: 0.9;
 }
 .cuong-card-body button:hover {
-    opacity: 1.5;
+  opacity: 1.5;
 }
 .like-style {
-    background-color: #008CBA;
+  background-color: #008cba;
 }
 .retweet-style {
-    background-color: #4CAF50;
+  background-color: #4caf50;
 }
 #cuong-delete {
-    background-color: #f44336;
+  background-color: #f44336;
 }
 
 /* duc  */
-.duc-sidebar-right{
-    display: flex;
-    flex-direction: column;
-
+.duc-sidebar-right {
+  display: flex;
+  flex-direction: column;
 }
 
+.duc-input {
+  max-width: 18rem;
+  width: 100%;
+  border-radius: 22px;
 
-.duc-input{
-    max-width: 18rem;
-    width: 100%;
-    border-radius: 22px;
-    
-    background-color: #E6ECF0;
-    height: 48px;
-   
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;;
+  background-color: #e6ecf0;
+  height: 48px;
 
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
-.duc-input input{
-    position: relative;
-    width: 100%;
-    width: 242px;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    
+.duc-input input {
+  position: relative;
+  width: 100%;
+  width: 242px;
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 
-.duc-input div .fa-search{
-    position: absolute;
-    left:0;
+.duc-input div .fa-search {
+  position: absolute;
+  left: 0;
 }
 
 /* end duc */
