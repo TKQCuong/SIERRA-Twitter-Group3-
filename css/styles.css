@@ -1,4 +1,19 @@
-
+body{
+    display:flex;
+    justify-content: space-between;
+    padding-left: 67px;
+    padding-right: 67px;
+    
+}
+.vu-cuong{
+    flex: 2;
+}
+.duc{
+    flex: 1;
+}
+.side-bar{
+    flex: 1;
+}
 
 /* please declare class name or id with name first. ex: duc-body,duc-img,etc. */
 /* parsa */
@@ -32,10 +47,10 @@
     display: flex;
 }
 #inputText{
-    width: 100%;
+    width: 90%;
 }
 #text{
-    width: 100%;
+    width: 90%;
 }
 #btnInput{
     margin-left: 10px;
