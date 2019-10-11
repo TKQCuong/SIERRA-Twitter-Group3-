@@ -82,16 +82,18 @@
     min-width: 50%;
     height: auto;
 }
-
+.cuong-card-body h5 {
+    font-size: 1rem;
+}
 .cuong-comment {
-    font-size: 12px;
+    font-size: 15px;
 }
 .cuong-row {
     display: flex;
 }
-.cuong-smallcard {
+/* .cuong-smallcard {
     border: solid 	#696969;
-}
+} */
 .cuong-card-body button {
     background-color: #4CAF50; /* Green */
     border: none;
