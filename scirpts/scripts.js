@@ -1,4 +1,14 @@
+// function getAppState() {
+//   return JSON.parse(localStorage.getItem("taskSaving")) || {   
+//   }
+// }
+// function save(taskSaving) {
+//   return localStorage.setItem('taskSaving', JSON.stringify(taskSaving));
+// }
+
 let arrTweet = [];
+// arrTweet = getAppState()
+console.log('arrTweet',arrTweet)
 let tweetText = document.getElementById("text");
 const MAX_TEXT = 140;
 tweetText.addEventListener('input', countText);
@@ -16,9 +26,13 @@ function tweetPost()
 
     arrTweet.unshift(obj)
     tweetText.value = "";
+    
     renderTweeter()
+    countText()
+    // save(arrTweet)
+    
 }
-tweetPost()
+
 function renderTweeter()
 {
     let html = arrTweet.map((char,i)=>
@@ -28,16 +42,16 @@ function renderTweeter()
         <div class="card mb-3 cuong-smallcard" style="max-width: 640px;">
           <div class="row no-gutters cuong-row">
             <div class="col-md-4 cuong-img-div">
-              <img src="https://www.asiatripdeals.com/wp-content/uploads/2019/03/Anonymous-Avatar.png" class="card-img cuong-card-img" alt="..." />
+              <img src="img/avatar.jpg" class="card-img cuong-card-img" alt="..." />
             </div>
             <div class="col-md-8" id="show-message">
               <div class="card-body cuong-card-body">
-                <h5 class="card-title">NAME</h5>
+                <h5 class="card-title">Group 3</h5>
                 <p class="card-text cuong-comment">${insertLink(char.body)}</p>
                 <hr>
                 <p class="card-text">Posted by <b>Anonymous</b></p>
-                <button onclick="like(${i})" id="cuong-like${i}" value="Like">Like</button>
-                <button onclick="reTweet(${i})">Retweet</button>
+                <button onclick="like(${i})" id="cuong-like${i}" class="like-style" value="Like">Like</button>
+                <button onclick="reTweet(${i})" class="retweet-style">Retweet</button>
                 <button id="cuong-delete" onclick="cuongdelete(${i})">Delete</button>
                 <p class="card-text">
                   <small class="text-muted">${moment(char.time).startOf("minute").fromNow()}</small>
@@ -53,36 +67,53 @@ function renderTweeter()
         ).join(" ")
         document.getElementById('result').innerHTML = html
         
+        
 }
 function cuongdelete(i){
   arrTweet.splice(i,1);
+  // save(arrTweet)
   renderTweeter();
 }
-
 
 function like(i){
   let like = document.getElementById(`cuong-like${i}`);
   if(like.value === "Like"){
     like.value = "Unlike";
     document.getElementById(`cuong-like${i}`).innerHTML = "Unlike";
-    document.getElementById(`cuong-like${i}`).style.backgroundColor= "red";
+    document.getElementById(`cuong-like${i}`).style.backgroundColor= "#008CBA";
+    // save(arrTweet)
   }
   else{
     like.value = "Like";
     document.getElementById(`cuong-like${i}`).innerHTML = "Like";
     document.getElementById(`cuong-like${i}`).style.backgroundColor = "#008CBA";
+    // save(arrTweet)
   }
+  
 }
 
 function reTweet(i)
 {
     let reTweetProm = prompt("What on your mind? ");
-    arrTweet[i].comment.push(reTweetProm);
-    console.log(arrTweet[i]);
-    let htmlReTweet = arrTweet[i].comment.map(reTweet => {
-      return `${reTweet}`
-    }).join("<br>");
-    document.getElementById(`cuong-retweet${i}`).innerHTML = htmlReTweet;
+    if (reTweetProm !== null) {
+      arrTweet[i].comment.push(reTweetProm);
+      console.log(arrTweet[i]);
+      let htmlReTweet = arrTweet[i].comment.map(reTweet => {
+        return `${reTweet}`
+      }).join("<br>");
+      document.getElementById(`cuong-retweet${i}`).innerHTML = htmlReTweet;
+      // save(arrTweet)
+    }
+    else {
+      arrTweet[i].comment.push("");
+      console.log(arrTweet[i]);
+      let htmlReTweet = arrTweet[i].comment.map(reTweet => {
+        return `${reTweet}`
+      }).join("<br>");
+      document.getElementById(`cuong-retweet${i}`).innerHTML = htmlReTweet;
+      // save(arrTweet)
+    }
+    
 }
 function insertLink(string) {
     const splitString = string.split(' ')
@@ -104,7 +135,6 @@ function countText(){
         document.getElementById('text').style.color="black"  
         document.getElementById('btn-tweeter').disabled=false
     }
-
 }
 
 
