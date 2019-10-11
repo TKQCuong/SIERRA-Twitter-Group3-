@@ -7,6 +7,9 @@ body{
 }
 .vu-cuong{
     flex: 2;
+    border: 0.5px solid grey;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 .duc{
     flex: 1;
@@ -82,33 +85,40 @@ body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
 }
 /* end vu  */
-
+.vu-cuong hr {
+    margin-bottom: 0px;
+}
 /* cuong  */
 #cuong-section {
     display: flex;
     justify-content: center;
+    padding-top: 0px;
+}
+.cuong-smallcard {
+    border-radius: 0px;;
+    margin-bottom: 0rem!important;
 }
 .cuong-card-img {
     padding-top: 0.8rem; 
     padding-left: 0.8rem;
     border-radius: 50%;
-    /* width: 10rem; */
-    max-width: 10%;
     min-width: 50%;
     height: auto;
 }
-
+.cuong-card-body h5 {
+    font-size: 1rem;
+}
 .cuong-comment {
-    font-size: 12px;
+    font-size: 15px;
 }
 .cuong-row {
     display: flex;
 }
-.cuong-smallcard {
+/* .cuong-smallcard {
     border: solid 	#696969;
-}
+} */
 .cuong-card-body button {
-    background-color: #4CAF50; /* Green */
+    /* background-color: #4CAF50; Green */
     border: none;
     border-radius: 10px;
     color: white;
@@ -125,10 +135,10 @@ body{
 .cuong-card-body button:hover {
     opacity: 1.5;
 }
-#cuong-like {
+.like-style {
     background-color: #008CBA;
 }
-#cuong-retweet {
+.retweet-style {
     background-color: #4CAF50;
 }
 #cuong-delete {
