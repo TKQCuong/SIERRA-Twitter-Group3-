@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>SIERRA</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -9,8 +9,13 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
@@ -18,69 +23,105 @@
   </head>
   <body>
     <!-- parsa -->
-
+    <div class="sidebar" style="background-color: blue;">
+      <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="#services"><i class="fa fa-fw fa-wrench"></i> Services</a>
+      <a href="#clients"><i class="fa fa-fw fa-user"></i> Clients</a>
+      <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+    </div>
     <!-- end parsa -->
 
     <!-- vu  -->
-    <div id="vu">
-      <div class="homePage">
-        <h2 id="homeText">Home</h2>
-        <img src="starIcon.PNG" id="imgHome"/>
-      </div>
-      <hr />
-      <div id="input">
-        <img src="avatar-icon.png" style="height: 45px; padding-left: 15px;">
-        <div id="inputText">
-          <input type="text" id="text">
-          <div id="typeOfInput">
-            
+    <div class="vu-cuong">
+      <div id="vu">
+        <div class="homePage">
+          <h2 id="homeText">Home</h2>
+          <img src="img/starIcon.PNG" id="imgHome" />
+        </div>
+        <hr />
+        <div id="input">
+          <img
+            src="img/avatar-icon.png"
+            style="height: 45px; padding-left: 15px; padding-right: 15px;"
+          />
+          <div id="inputText">
+            <textarea
+              type="text"
+              id="text"
+              style="height: 80px;"
+              placeholder="What's happening?"
+            ></textarea>
+            <div id="typeOfInput" style="padding-top: 10px;">
+              <img src="img/img-icon.PNG" />
+              <img src="img/gif-icon.PNG" />
+              <img src="img/line-icon.PNG" />
+              <img src="img/smile-icon.PNG" />
+
+              <button
+                onclick="tweetPost()"
+                id="btn-tweeter"
+                type="button"
+                class="btn btn-primary active"
+                style="border-top-left-radius: 999px;border-top-right-radius: 999px;border-bottom-left-radius: 999px;border-bottom-right-radius: 999px;"
+              >
+                Tweet
+              </button>
+              <span id="countText"></span>
+            </div>
           </div>
         </div>
-      </div>   
-    </div>
-    <!-- end vu -->
+      </div>
+      <hr style="height: 5px; background-color:	#E0E0E0;" />
+      <!-- end vu -->
 
-    <!-- cuong -->
-
-    <div id="cuong-card">
-      <!-- The image in the card will be fixed with our picture -->
-      <div class="card mb-3" style="max-width: 540px;">
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <img src="img/examplePic.jpg" class="card-img" alt="..." />
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <hr />
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <p class="card-text">
-                <small class="text-muted">Last updated 3 mins ago</small>
-              </p>
+      <!-- cuong -->
+      <!-- cuong -->
+      <div id="cuong-section">
+        <!-- The image in the card will be fixed with our picture -->
+        <div
+          id="result"
+          class="card mb-3 cuong-smallcard"
+          style="max-width: 640px;"
+        >
+          <div class="row no-gutters cuong-row">
+            <div class="col-md-4 cuong-img-div">
+              <!-- <img src="https://www.asiatripdeals.com/wp-content/uploads/2019/03/Anonymous-Avatar.png" class="card-img cuong-card-img" alt="..." /> -->
+            </div>
+            <div class="col-md-8" id="show-message">
+              <!-- <div class="card-body cuong-card-body">
+                <h5 class="card-title">NAME</h5>
+                <p class="card-text cuong-comment">COMMENT SECTION</p>
+                <hr>
+                <p class="card-text">Posted by <b>Anonymous</b> a few seconds ago</p>
+                <button id="cuong-like">Like</button>
+                <button id="cuong-retweet">Retweet</button>
+                <button id="cuong-delete">Delete</button>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div> -->
             </div>
           </div>
         </div>
       </div>
     </div>
+
     <!-- end cuong -->
 
     <!-- duc -->
     <div class="duc-sidebar-right">
       <div class="duc-input">
-        <i class="fa fa-search" aria-hidden="true"></i>  
-        <span class="ml-2"> <input type="text"  placeholder="Search Twitter"/></span>
-        
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <span class="ml-2">
+          <input type="text" placeholder="Search Twitter"
+        /></span>
       </div>
       <div class="duc-yourTrend mt-3">
         <div class="card" style="width: 18rem;">
-          <h2 class="card-header">
-            Trends for you
-          </h2>
-          <ul class="list-group list-group-flush">
+          <div class="card-header duc-font-awesome">
+            <b>Trends for you</b><span class="duc-circle-cog"><i class="fa fa-cog"></i></span>
+          </div>
+          <ul class="list-group list-group-flush ">
             <li class="list-group-item duc-trend-hover">#Vietnam</li>
             <li class="list-group-item duc-trend-hover">Hong Kong</li>
             <li class="list-group-item duc-trend-hover">China</li>
@@ -90,29 +131,56 @@
           </ul>
         </div>
       </div>
-      <div class="duc-follow mt-3">
-        <div class="card" style="width: 18rem;">
-          <div class="card-header">
-            Who to follow
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Ha Noi</li>
-            <li class="list-group-item">Malaysia</li>
-            <li class="list-group-item"><a href="#">Show more</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="duc-coppyright">
-          <ul>
-              <li><a href="#">Terms</a></li>
-              <li><a href="#">Privacy policy</a></li>
-              <li><a href="#">Cookies</a></li>
-              <li><a href="#">Ads info</a></li>
-              <li><a href="#">More</a></li>
-              <li><a href="#">&#169; 2019 Twitter, Inc.</a></li>
-          </ul>
+      <div class="duc-yourTrend mt-3">
+          <div class="card" style="width: 18rem;">
+            <div class="card-header duc-font-awesome">
+              <b>Who to follow</b>
+            </div>
+            <ul class="list-group list-group-flush ">
+        
+              <li class="list-group-item duc-trend-hover duc-follow">
+                <div class="duc-follow-info">
+                  <img src="img/avatar-icon.png" alt="">
+                  <div class="duc-follow-info-info"><p>Justin Sun<br>@justinsuntron</p></div>
+                </div>
+                <div class="duc-btn-follow">Follow</div>
+              </li>
+        
+              <li class="list-group-item duc-trend-hover duc-follow">
+                <div class="duc-follow-info">
+                  <img src="img/avatar-icon.png" alt="">
+                  <div class="duc-follow-info-info"><p>Patrarchs<br>@BnCung1</p></div>
+                </div>
+                <div class="duc-btn-follow">Follow</div>
+              </li>
+    
+              <li class="list-group-item duc-trend-hover duc-follow">
+                <div class="duc-follow-info">
+                  <img src="img/avatar-icon.png" alt="">
+                  <div class="duc-follow-info-info"><p>Amy Nguyen<br>@BeChangNe97</p></div>
+                </div>
+                <div class="duc-btn-follow">Follow</div>
+              </li>
+              <li class="list-group-item duc-trend-hover"><a href="#">Show more</a></li>
 
-      </div>
+           
+        
+            </ul>
+          </div>
+        </div>
+        <div class="duc-coppyright">
+        <ul>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Ads info</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">More</a></li>
+            <li><a href="#">&#169; 2019 Twitter, Inc.</a></li>
+        </ul>
+
+    </div>
     </div>
     <!-- end duc -->
     <!-- Optional JavaScript -->
@@ -132,6 +200,7 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="scirpts/scripts.js"></script>
   </body>
 </html>
