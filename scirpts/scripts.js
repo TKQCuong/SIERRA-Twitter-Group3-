@@ -8,6 +8,11 @@
 // }
 // let arrTweet = getAppState()
 
+
+//LIVE BACKGROUND
+
+//END LIVE BACKGROUND
+
 let arrTweet = [];
 let tweetText = document.getElementById("text");
 const MAX_TEXT = 140;
