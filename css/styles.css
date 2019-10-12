@@ -3,6 +3,7 @@ body {
   justify-content: space-between;
   padding-left: 67px;
   padding-right: 67px;
+  margin-top:10px;
 }
 .vu-cuong {
   flex: 2;
@@ -171,6 +172,11 @@ body {
   align-items: center;
 }
 
+.duc-input:hover{
+  background-color: white;
+  border:1px solid #1DA1F2
+}
+
 .duc-input input {
   position: relative;
   width: 100%;
@@ -184,5 +190,99 @@ body {
   position: absolute;
   left: 0;
 }
+
+
+.duc-yourTrend{
+  border-radius: 25px;
+}
+.duc-yourTrend .card{
+  border-radius: 25px;
+}
+
+.duc-trend-hover{
+  background-color: rgba(0,0,0,.03);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+}
+.duc-trend-hover:hover{
+  cursor: pointer;
+  background-color: #F5F8FA;
+
+}
+
+.duc-font-awesome{
+  display: flex;
+  justify-content: space-between;
+  padding: 7px;
+  font-size: 15pt;
+}
+
+.duc-circle-cog{
+  width: 38px;
+  border-radius: 20px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.duc-circle-cog:hover{
+  background-color: #DFEFFA;
+}
+
+.duc-circle-cog i{
+  color: #1DA1F2;
+}
+
+
+.duc-follow{
+  display: flex;
+  justify-content: space-between;
+}
+
+.duc-follow-info{
+  display: flex;
+  justify-content: space-between;
+}
+
+.duc-follow-info img{
+  width: 50px;
+  height: 50px;
+}
+
+.duc-btn-follow{
+  border: 1px solid #1DA1F2;
+  border-radius: 18px;
+  height: 34px;
+  width: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  color: #1DA1F2;
+}
+
+.duc-btn-follow:hover{
+  background-color: #D8E9F5;
+}
+
+
+.duc-coppyright ul{
+  display: flex;
+  padding: 0;
+  list-style-type: none;
+  margin:0;
+}
+
+  .duc-coppyright ul li{
+  margin-right:6px;
+} 
+
+.duc-coppyright ul li a{
+  color:#A1ACB5;
+  font-size: 10pt;
+  text-decoration: none;
+
+}   
+
+
 
 /* end duc */
