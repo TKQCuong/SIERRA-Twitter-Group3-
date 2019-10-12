@@ -1,131 +1,288 @@
+body {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 67px;
+  padding-right: 67px;
+  margin-top:10px;
+}
+.vu-cuong {
+  flex: 2;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  margin-left: 2%;
+  margin-right: 2%;
+  display: inline-block;
+  min-width: 150px;
+}
+.duc {
+  flex: 1;
+}
+.side-bar {
+  flex: 1;
+}
 
 /* please declare class name or id with name first. ex: duc-body,duc-img,etc. */
+
 /* parsa */
+
+
+
 
 /* end parsa */
 
 /* vu */
-.homePage{
-    height: 53px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15p;
-    padding-right: 15px;
+.homePage {
+  height: 53px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15p;
+  padding-right: 15px;
 }
-#homeText{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
-    line-height: 1.3;
-    font-size: 19px;
-    flex-shrink: 1;
-    flex-grow: 1;
-    flex: 7;
-    align-items: center;
-    justify-content: center;
-    padding-left: 15px;
+#homeText {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", sans-serif;
+  line-height: 1.3;
+  font-size: 19px;
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex: 7;
+  align-items: center;
+  justify-content: center;
+  padding-left: 15px;
 }
-#input{
-    display: flex;
+#input {
+  display: flex;
 }
-#text{
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
+#inputText {
+  width: 90%;
+}
+#text {
+  width: 90%;
+}
+#btnInput {
+  margin-left: 10px;
+  opacity: 0.5;
+  background-color: rgb(29, 161, 242);
+  transition-property: background-color, box-shadow;
+  transition-duration: 0.2s;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-bottom-color: rgba(0, 0, 0, 0);
+  border-left-color: rgba(0, 0, 0, 0);
+  border-right-color: rgba(0, 0, 0, 0);
+  border-top-color: rgba(0, 0, 0, 0);
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-left-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-top-style: solid;
+}
+#tweetbtn {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", sans-serif;
 }
 /* end vu  */
-
+.vu-cuong hr {
+  margin-bottom: 0px;
+}
 /* cuong  */
-#cuong-card {
-    display: flex;
-    justify-content: center;
+#cuong-section {
+  display: flex;
+  justify-content: center;
+  padding-top: 0px;
 }
-.card-img {
-    width: 100px;
-    padding-top: 1.5rem;
+.cuong-smallcard {
+  border-radius: 0px;
+  margin-bottom: 0rem !important;
 }
-
-.row {
-    display: flex;
+.cuong-card-img {
+  padding-top: 0.8rem;
+  padding-left: 0.8rem;
+  border-radius: 50%;
+  min-width: 50%;
+  height: auto;
 }
-
-/* end cuong */
+.cuong-card-body h5 {
+  font-size: 1rem;
+}
+.cuong-comment {
+  font-size: 15px;
+}
+.cuong-row {
+  display: flex;
+}
+/* .cuong-smallcard {
+    border: solid 	#696969;
+} */
+.cuong-card-body button {
+  /* background-color: #4CAF50; Green */
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 7px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  opacity: 0.9;
+}
+.cuong-card-body button:hover {
+  opacity: 1.5;
+}
+.like-style {
+  background-color: #008cba;
+}
+.retweet-style {
+  background-color: #4caf50;
+}
+#cuong-delete {
+  background-color: #f44336;
+}
 
 /* duc  */
-.duc-sidebar-right{
-    display: flex;
-    flex-direction: column;
-
+.duc-sidebar-right {
+  display: flex;
+  flex-direction: column;
 }
 
-.duc-input{
-    max-width: 18rem;
-    width: 100%;
-    border-radius: 22px;
-    
-    background-color: #E6ECF0;
-    height: 48px;
-   
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;;
+.duc-input {
+  max-width: 18rem;
+  width: 100%;
+  border-radius: 22px;
+
+  background-color: #e6ecf0;
+  height: 48px;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 .duc-input:hover{
-    background-color: white;
-    border:1px solid #1DA1F2
+  background-color: white;
+  border:1px solid #1DA1F2
 }
 
-.duc-input input{
-    position: relative;
-    width: 100%;
-    width: 242px;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    
+.duc-input input {
+  position: relative;
+  width: 100%;
+  width: 242px;
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 
-
-.duc-input div .fa-search{
-    position: absolute;
-    left:0;
+.duc-input div .fa-search {
+  position: absolute;
+  left: 0;
 }
+
 
 .duc-yourTrend{
-    border-radius: 25px;
+  border-radius: 25px;
 }
 .duc-yourTrend .card{
-    border-radius: 25px;
+  border-radius: 25px;
 }
 
 .duc-trend-hover{
-    background-color: rgba(0,0,0,.03);
+  background-color: rgba(0,0,0,.03);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
 }
 .duc-trend-hover:hover{
-    cursor: pointer;
-    background-color: #F5F8FA;
+  cursor: pointer;
+  background-color: #F5F8FA;
 
+}
+
+.duc-font-awesome{
+  display: flex;
+  justify-content: space-between;
+  padding: 7px;
+  font-size: 15pt;
+}
+
+.duc-circle-cog{
+  width: 38px;
+  border-radius: 20px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.duc-circle-cog:hover{
+  background-color: #DFEFFA;
+}
+
+.duc-circle-cog i{
+  color: #1DA1F2;
+}
+
+
+.duc-follow{
+  display: flex;
+  justify-content: space-between;
+}
+
+.duc-follow-info{
+  display: flex;
+  justify-content: space-between;
+}
+
+.duc-follow-info img{
+  width: 50px;
+  height: 50px;
+}
+
+.duc-btn-follow{
+  border: 1px solid #1DA1F2;
+  border-radius: 18px;
+  height: 34px;
+  width: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  color: #1DA1F2;
+}
+
+.duc-btn-follow:hover{
+  background-color: #D8E9F5;
 }
 
 
 .duc-coppyright ul{
-    display: flex;
-    padding: 0;
-    list-style-type: none;
+  display: flex;
+  padding: 0;
+  list-style-type: none;
+  margin:0;
 }
 
-.duc-coppyright ul li{
-    margin-right:6px;
-}
+  .duc-coppyright ul li{
+  margin-right:6px;
+} 
 
 .duc-coppyright ul li a{
-    color:#A1ACB5;
-    font-size: 10pt;
-    text-decoration: none;
+  color:#A1ACB5;
+  font-size: 10pt;
+  text-decoration: none;
 
-}
+}   
+
+
+
 /* end duc */
