@@ -45,6 +45,7 @@ function tweetPost() {
   const content = tweetText.value;
   let obj = {
     comment: [],
+    islike:false,
     body: content,
     time: Date.now()
   };
@@ -71,7 +72,7 @@ function renderTweeter() {
                 <p class="card-text cuong-comment">${insertLink(char.body)}</p>
                 <hr>
                 <p class="card-text">Posted by <b>Group 3</b></p>
-                <button onclick="like(${i})" id="cuong-like${i}" class="like-style" value="Like">Like</button>
+                <button onclick="like(${i})" id="cuong-like${i}" class="like-style">Like</button>
                 <button onclick="reTweet(${i})" class="retweet-style">Retweet</button>
                 <button id="cuong-delete" onclick="cuongdelete(${i})">Delete</button>
                 <p class="card-text">
@@ -98,18 +99,40 @@ function cuongdelete(i) {
 }
 
 function like(i) {
-  let like = document.getElementById(`cuong-like${i}`);
-  if (like.value === "Like") {
-    like.value = "Unlike";
-    document.getElementById(`cuong-like${i}`).innerHTML = "Unlike";
-    document.getElementById(`cuong-like${i}`).style.backgroundColor = "#008CBA";
-    // save(arrTweet)
-  } else {
-    like.value = "Like";
+  let likebtn = arrTweet[i].islike === false
+  if(likebtn)
+  {
+    arrTweet[i].islike = true
     document.getElementById(`cuong-like${i}`).innerHTML = "Like";
     document.getElementById(`cuong-like${i}`).style.backgroundColor = "#008CBA";
-    // save(arrTweet)
+    console.log('like',arrTweet)
+
   }
+  else{
+    arrTweet[i].islike=false
+    document.getElementById(`cuong-like${i}`).innerHTML = "Unlike";
+    document.getElementById(`cuong-like${i}`).style.backgroundColor = "#008CBA";
+    console.log('unlike',arrTweet)
+    
+  }
+  save()
+  // let like = document.getElementById(`cuong-like${i}`);
+  // if(like.value==true)
+
+
+  // if (like.value === "Like") {
+  //   like.value = "Unlike";
+  //   document.getElementById(`cuong-like${i}`).innerHTML = "Unlike";
+  //   document.getElementById(`cuong-like${i}`).style.backgroundColor = "#008CBA";
+  //   // save(arrTweet)
+  //   save()
+  // } else {
+  //   like.value = "Like";
+  //   document.getElementById(`cuong-like${i}`).innerHTML = "Like";
+  //   document.getElementById(`cuong-like${i}`).style.backgroundColor = "#008CBA";
+  //   // save(arrTweet)
+  //   save()
+  // }
 }
 
 function reTweet(i) {
@@ -125,6 +148,7 @@ function reTweet(i) {
       .join("<br>");
     document.getElementById(`cuong-retweet${i}`).innerHTML = htmlReTweet;
     // save(arrTweet)
+    save()
   }
 
    else {
