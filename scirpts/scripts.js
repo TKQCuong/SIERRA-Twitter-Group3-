@@ -7,7 +7,6 @@
 // }
 // let arrTweet = getAppState()
 
-
 //Sound click
 let tweetSound = document.createElement('audio')
 tweetSound.src="sound/Tweet-sound.wav"
@@ -18,6 +17,28 @@ let tweetText = document.getElementById("text");
 const MAX_TEXT = 140;
 tweetText.addEventListener("input", countText);
 let num = 0;
+
+// storage 
+function getOldStorage()
+{
+  if(localStorage.getItem('appstate')!=null)
+  {
+    arrTweet = JSON.parse(localStorage.getItem('appstate'))
+    renderTweeter()
+  }
+}
+
+getOldStorage()
+
+function save()
+{
+  localStorage.setItem('appstate',JSON.stringify(arrTweet))
+}
+
+// end storage
+
+
+
 
 function tweetPost() {
     
@@ -68,6 +89,7 @@ function renderTweeter() {
     })
     .join(" ");
   document.getElementById("result").innerHTML = html;
+  save()
 }
 
 function cuongdelete(i) {
@@ -92,6 +114,7 @@ function like(i) {
 
 function reTweet(i) {
   let reTweetProm = prompt("What's on your mind? ");
+  
   if (reTweetProm !== null) {
     arrTweet[i].comment.push(reTweetProm);
     console.log(arrTweet[i]);
@@ -102,7 +125,9 @@ function reTweet(i) {
       .join("<br>");
     document.getElementById(`cuong-retweet${i}`).innerHTML = htmlReTweet;
     // save(arrTweet)
-  } else {
+  }
+
+   else {
     arrTweet[i].comment.push("");
     console.log(arrTweet[i]);
     let htmlReTweet = arrTweet[i].comment
@@ -114,6 +139,9 @@ function reTweet(i) {
     // save(arrTweet)
   }
 }
+
+
+
 function insertLink(string) {
   const splitString = string.split(" ");
   return splitString
