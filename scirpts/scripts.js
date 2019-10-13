@@ -1,7 +1,6 @@
 // function getAppState() {
 //   return JSON.parse(localStorage.getItem("taskSaving")) || obj[]
   
-
 // }
 // function save(taskSaving) {
 //   return localStorage.setItem('taskSaving', JSON.stringify(taskSaving));
@@ -9,9 +8,10 @@
 // let arrTweet = getAppState()
 
 
-//LIVE BACKGROUND
-
-//END LIVE BACKGROUND
+//Sound click
+let tweetSound = document.createElement('audio')
+tweetSound.src="sound/Tweet-sound.wav"
+//End sound
 
 let arrTweet = [];
 let tweetText = document.getElementById("text");
@@ -20,6 +20,7 @@ tweetText.addEventListener("input", countText);
 let num = 0;
 
 function tweetPost() {
+    
   const content = tweetText.value;
   let obj = {
     comment: [],
@@ -31,6 +32,7 @@ function tweetPost() {
 
   renderTweeter();
   countText();
+  tweetSound.play(); 
 }
 
 function renderTweeter() {
@@ -125,12 +127,15 @@ function countText() {
   let remainLetter = MAX_TEXT - tweetText.value.length;
   document.getElementById("countText").innerHTML = remainLetter;
   if (remainLetter < 0) {
-    document.getElementById("text").style.color = "red";
+    tweetText.style.color = "red";
+    document.getElementById("countText").style.color = "red";
     document.getElementById("btn-tweeter").disabled = true;
+    document.getElementById("btn-tweeter").style.cursor = "not-allowed";
   } else if (remainLetter === 140) {
     document.getElementById("btn-tweeter").disabled = true;
   } else {
-    document.getElementById("text").style.color = "black";
+    tweetText.style.color = "black";
+    document.getElementById("countText").style.color = "black";
     document.getElementById("btn-tweeter").disabled = false;
   }
 }
