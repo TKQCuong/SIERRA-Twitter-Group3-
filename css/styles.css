@@ -15,8 +15,9 @@ body {
 	background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-right: 67px;
+  margin-top:4px;
 }
 
  @keyframes gradientBG {
@@ -36,7 +37,7 @@ body {
 	position: absolute;
 	top: 35%;
   text-align: center;
-  z-index: -1;
+  /* z-index: -1; */
 } 
 .container h2 {
   margin-top: 6%;
@@ -51,27 +52,63 @@ body {
 /* END LIVE BACKGROUND */
 
 .vu-cuong {
-  flex: 2;
+  flex: 3;
   /* border: 1px solid rgba(0, 0, 0, 0.125); */
   margin-left: 2%;
   margin-right: 2%;
   display: inline-block;
   min-width: 150px;
   max-width: 100%;
-  padding-right: 18.5%;
-  padding-left: 26.7%;
+  /* padding-right: 18.5%;
+  padding-left: 26.7%; */
 }
 
-.duc {
+/* .duc {
   flex: 1;
-}
+} */
 .sidebar {
-  flex: 1;
+  /* flex: 1; */
   position: fixed;
   height: 100%;
 }
 
 /* parsa */
+
+.parsa-sidebar-left{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index:2;
+
+}
+
+.parsa-circle-sidebar{
+  width:60px;
+  height: 60px;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26pt;
+  border-radius: 50px;
+  margin-bottom: 2px;
+
+}
+
+.parsa-circle-sidebar:hover{
+  background-color: #8ED0F9;
+  cursor: pointer;
+}
+
+.fa-twitter{
+  color:#1DA1F2
+}
+
+.fa-home{
+  color:#1DA1F2
+}
+
 
 
 /* end parsa */
@@ -248,9 +285,10 @@ body {
 
 /* duc  */
 .duc-sidebar-right {
+  flex:2;
   display: flex;
   flex-direction: column;
-  position: absolute;
+  /* position: absolute; */
   right: 0;
 }
 
